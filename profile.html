@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Profile | Poppino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">POPP<span>INO</span></div>
+      <a href="index.html" class="btn secondary-btn">← Home</a>
+    </div>
+  </header>
+
+  <!-- PROFILE -->
+  <section class="cart">
+    <div class="container">
+
+      <h1 class="cart-title">My Profile</h1>
+      <button id="edit-profile-btn" class="btn secondary-btn" style="margin-bottom:20px;">
+  Edit Profile
+</button>
+
+
+      <div class="profile-card">
+
+  <div class="profile-row">
+  <strong>Name</strong>
+  <span id="profile-name"></span>
+  <input id="edit-name" type="text" style="display:none;" />
+</div>
+
+
+  <div class="profile-row">
+    <strong>Email</strong>
+    <span id="profile-email"></span>
+  </div>
+
+  <div class="profile-row">
+    <strong>Phone</strong>
+    <span id="profile-phone"></span>
+  </div>
+
+  <div class="profile-row">
+  <strong>Address</strong>
+  <span id="profile-address"></span>
+  <textarea id="edit-address" style="display:none;"></textarea>
+</div>
+
+
+  <div class="profile-row">
+    <strong>Total Orders</strong>
+    <span id="profile-orders"></span>
+  </div>
+  <button id="save-profile-btn" class="btn primary-btn" style="display:none; margin-right:10px;">
+  Save Changes
+</button>
+
+
+  <div class="profile-actions">
+    <button id="profile-logout" class="remove-btn">
+      Logout
+    </button>
+  </div>
+
+</div>
+<h2 style="margin:40px 0 16px;">Recent Orders</h2>
+
+<div id="recent-orders"></div>
+
+<a href="orders.html" class="btn secondary-btn" style="margin-top:20px;">
+  View All Orders
+</a>
+
+
+
+    </div>
+  </section>
+  <script src="js/fakeApi.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/utils/authState.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

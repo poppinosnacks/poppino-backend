@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signup | Poppino</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<section class="auth-page">
+  <div class="auth-box">
+    <h2>Create Account</h2>
+    <p>Signup with your email to continue</p>
+
+    <input type="text" id="signup-name" placeholder="Full Name" />
+    <input type="tel" id="signup-phone" placeholder="Phone Number" />
+    <textarea id="signup-address" placeholder="Full Address"></textarea>
+    <input type="email" id="signup-email" placeholder="Email Address" />
+
+    <button id="signup-btn" class="btn primary-btn">Send OTP</button>
+
+    <p id="signup-msg" class="auth-msg"></p>
+
+    <p class="auth-link">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+  </div>
+</section>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

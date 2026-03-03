@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | Poppino</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">POPP<span>INO</span></div>
+      <a href="cart.html" class="btn secondary-btn">← Back to Cart</a>
+    </div>
+  </header>
+
+  <!-- CHECKOUT -->
+  <section class="checkout">
+    <div class="container checkout-wrap">
+
+      <!-- LEFT: ADDRESS FORM -->
+      <div class="checkout-left">
+        <h2>Delivery Details</h2>
+
+        <form id="checkout-form" class="classic-form">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required>
+
+          <label>Phone Number</label>
+          <input type="tel" placeholder="10-digit mobile number" required>
+
+          <label>Delivery Address</label>
+          <textarea placeholder="House no, street, area, city, pincode" required></textarea>
+          <h3 style="margin:20px 0 10px;">Payment Method</h3>
+
+<div class="payment-options">
+  <label class="payment-box">
+    <input type="radio" name="payment" value="COD" checked>
+    <span>💵 Cash on Delivery (COD)</span>
+  </label>
+
+  <label class="payment-box">
+    <input type="radio" name="payment" value="UPI">
+    <span>📱 UPI (PhonePe / GPay / Paytm)</span>
+  </label>
+</div>
+
+
+          <button type="submit" class="btn primary-btn full-btn">
+    Place Order
+  </button>
+
+  <!-- TRUST BADGES -->
+  <div class="trust-badges">
+    🔒 100% Secure Checkout &nbsp; • &nbsp;
+    💵 Cash on Delivery Available &nbsp; • &nbsp;
+    🚚 Fast Delivery
+  </div>
+        </form>
+
+        <p id="success-msg" class="success-msg">
+          🎉 Order placed successfully! We’ll contact you shortly.
+        </p>
+      </div>
+
+      <!-- RIGHT: ORDER SUMMARY -->
+      <div class="checkout-right">
+        <h3>Order Summary</h3>
+
+        <div id="checkout-items">
+          <!-- JS yahan items dalega -->
+        </div>
+
+        <div class="summary-row">
+          <span>Total</span>
+          <strong>₹<span id="checkout-total">0</span></strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="js/fakeApi.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/utils/authState.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed | Poppino</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="success-page">
+
+  <div class="success-box">
+    <div class="success-icon">✓</div>
+
+    <h1>Order Confirmed</h1>
+
+    <p>
+      Thank you for choosing <b>Poppino</b>.<br>
+      Your order has been placed successfully.
+    </p>
+    <p><b>Order ID:</b> <span id="order-id"></span></p>
+    <div class="order-details">
+      <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+      <p><strong>Total Amount:</strong> ₹<span id="order-total"></span></p>
+      <p><strong>Payment Method:</strong> <span id="order-payment"></span></p>
+    </div>
+
+    <a href="index.html" class="btn secondary-btn">Continue Shopping</a>
+  </div>
+
+  <script>
+  const order = JSON.parse(localStorage.getItem("lastOrder"));
+
+  // ❌ Block direct access
+  if (!order) {
+    window.location.href = "index.html";
+  } else {
+    document.getElementById("order-id").innerText = order.orderId;
+    document.getElementById("order-total").innerText = order.total;
+    document.getElementById("order-payment").innerText = order.paymentMethod;
+
+    // one-time view (security feel)
+    setTimeout(() => {
+      localStorage.removeItem("lastOrder");
+    }, 5000);
+  }
+  
+</script>
+<script src="js/utils/authState.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

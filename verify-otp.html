@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verify OTP</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="auth-page">
+  <div class="auth-box">
+    <h2>Verify OTP</h2>
+
+    <input id="otp" placeholder="Enter OTP" />
+    <button id="verify-btn" class="btn primary-btn">Verify</button>
+
+    <p id="msg" class="auth-msg"></p>
+  </div>
+</section>
+
+<script>
+const API_BASE = "https://poppino-backend-1.onrender.com/api/auth";
+const data = JSON.parse(localStorage.getItem("otpUser"));
+const msg = document.getElementById("msg");
+
+document.getElementById("verify-btn").onclick = async () => {
+  const otp = document.getElementById("otp").value.trim();
+
+  const res = await fetch(`${API_BASE}/verify-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...data, otp })
+  });
+
+  const result = await res.json();
+
+  if (!res.ok) {
+    msg.innerText = result.message;
+    return;
+  }
+
+  localStorage.setItem("token", result.token);
+  localStorage.setItem("currentUser", JSON.stringify(result.user));
+
+  window.location.href = "index.html";
+};
+</script>
+
+</body>
+</html>

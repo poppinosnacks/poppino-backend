@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poppino | Crave The Crunch</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+  <div class="container nav-content">
+
+    <!-- LOGO -->
+    <div class="logo">POPP<span>INO</span></div>
+
+    <!-- CENTER LINKS -->
+    <nav class="nav-links">
+      <a href="#flavours">Flavours</a>
+      <a href="#why-poppino">Why Poppino</a>
+      <a href="#our-story">About</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+
+    <!-- RIGHT ACTIONS -->
+    <div class="nav-actions">
+
+      <a href="orders.html" class="btn secondary-btn">
+        My Orders
+      </a>
+
+      <div class="user-menu">
+        <button id="user-btn" class="user-btn">
+          Hi <span id="user-name">User</span> ▾
+        </button>
+
+        <div id="user-dropdown" class="user-dropdown">
+          <a href="orders.html">My Orders</a>
+          <a href="profile.html">Profile</a>
+
+          <a href="#" id="logout-btn">Logout</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <span class="badge">✨ India’s Favourite Healthy Snack</span>
+
+        <h1 class="hero-title">
+          <span class="crave">Crave</span>
+          <span class="crunch">The Crunch</span>
+        </h1>
+
+        <p>
+          Crunchy · Healthy · Flavourful Makhana <br>
+          Premium roasted fox nuts with zero guilt and 100% crunch!
+        </p>
+
+        <div class="hero-buttons">
+          <a href="cart.html" class="btn primary-btn">Shop Now</a>
+          <a href="#flavours" class="btn secondary-btn">Explore Flavours</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>50K+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div>
+            <strong>4.9★</strong>
+            <span>Rating</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Natural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image">
+        <div class="image-box">
+          <span>Bestseller</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FLAVOURS SECTION ===== -->
+  <section class="flavours" id="flavours">
+    <div class="container">
+
+      <span class="section-badge">🍿 Our Flavours</span>
+      <h2 class="section-title">
+        Pick Your <span>Crunch</span>
+      </h2>
+      <p class="section-subtitle">
+        From tangy to spicy to sweet — there’s a Poppino for every mood!
+      </p>
+
+      <div class="flavour-grid">
+
+        <!-- Card 1 -->
+        <div class="flavour-card bestseller">
+  <span class="tag">Bestseller</span>
+
+  <div class="product-img">
+    <img src="assets/images/classic-salted.jpeg" alt="Classic Salted Makhana">
+  </div>
+
+  <h3>Classic Salted</h3>
+
+          <p>The OG crunch with just the right salt. Perfect for purists.</p>
+          <div class="card-bottom">
+            <span class="price">₹149</span>
+            <div class="qty-box">
+              <button class="qty-btn minus">−</button>
+              <span class="qty">0</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+       <div class="flavour-card spicy">
+  <span class="tag">Spicy</span>
+
+  <div class="product-img">
+    <img src="assets/images/indian-masala.jpeg" alt="Indian Masala">
+  </div>
+
+  <h3>Indian Masala</h3>
+
+          <p>Bold desi spices meet crispy crunch. Not for the faint-hearted!</p>
+          <div class="card-bottom">
+            <span class="price">₹169</span>
+            <div class="qty-box">
+              <button class="qty-btn minus">−</button>
+              <span class="qty">0</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="flavour-card refreshing">
+  <span class="tag">Refreshing</span>
+
+  <div class="product-img">
+    <img src="assets/images/pudina.jpeg" alt="Pudina">
+  </div>
+
+  <h3>Pudina</h3>
+
+          <p>Cool, refreshing mint with a tangy twist. Summer in a pack!</p>
+          <div class="card-bottom">
+            <span class="price">₹159</span>
+            <div class="qty-box">
+              <button class="qty-btn minus">−</button>
+              <span class="qty">0</span>
+              <button class="qty-btn plus">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="view-all">
+  <div class="shop-now-wrapper">
+    <a href="cart.html" class="btn primary-btn">Shop Now</a>
+    <span id="cart-count-bottom">0</span>
+  </div>
+</div>
+
+
+    </div>
+  </section>
+  <!-- ===== WHY POPPINO ===== -->
+<section class="why-poppino" id="why-poppino">
+  <div class="container why-grid">
+
+    <!-- LEFT CONTENT -->
+    <div class="why-left">
+      <span class="why-badge">Why Poppino?</span>
+      <h2>
+        Not Just Tasty, <br>
+        <span>Actually Healthy</span>
+      </h2>
+
+      <p>
+        We believe snacking should make you feel good, not guilty.
+        That’s why every pack of Poppino is crafted with care —
+        using premium makhana from Bihar, roasted (not fried),
+        and seasoned with real spices.
+      </p>
+
+      <div class="nutrition-stats">
+        <div>
+          <strong>9g</strong>
+          <span>Protein / 100g</span>
+        </div>
+        <div>
+          <strong>350</strong>
+          <span>Calories / 100g</span>
+        </div>
+        <div>
+          <strong>0g</strong>
+          <span>Trans Fat</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FEATURES -->
+    <div class="why-right">
+      <div class="feature-card">
+        ⚡
+        <h4>High Protein</h4>
+        <p>Packed with plant-based protein to fuel your day</p>
+      </div>
+
+      <div class="feature-card">
+        🔥
+        <h4>Low Calories</h4>
+        <p>Snack guilt-free with fewer calories per serving</p>
+      </div>
+
+      <div class="feature-card">
+        🌾
+        <h4>Gluten Free</h4>
+        <p>Safe for gluten-sensitive tummies</p>
+      </div>
+
+      <div class="feature-card">
+        🍃
+        <h4>Roasted, Not Fried</h4>
+        <p>Air-roasted for maximum crunch</p>
+      </div>
+
+      <div class="feature-card">
+        ❤️
+        <h4>No Preservatives</h4>
+        <p>100% natural ingredients, zero nasties</p>
+      </div>
+
+      <div class="feature-card">
+        🇮🇳
+        <h4>Made in India</h4>
+        <p>Proudly crafted with love in Bihar</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== OUR STORY ===== -->
+<section class="our-story" id="our-story">
+  <div class="container story-content">
+
+    <span class="story-badge">Our Story</span>
+
+    <h2>
+      From Bihar’s Fields to <br>
+      <span>Your Snack Time</span>
+    </h2>
+
+    <p class="story-text">
+      It all started with a simple question —
+      <b>“Why can’t healthy snacks taste amazing?”</b><br><br>
+
+      Born in the heart of India’s makhana belt, Poppino works directly
+      with farmers in Bihar to bring you fresh, fair, and flavour-packed
+      fox nuts. Every puff is roasted with care, seasoned with honesty,
+      and packed with love.
+    </p>
+
+    <div class="story-cards">
+      <div class="story-card">
+        🎯
+        <h4>Our Mission</h4>
+        <p>Make healthy snacking the tastiest choice for every Indian</p>
+      </div>
+
+      <div class="story-card">
+        👥
+        <h4>Our People</h4>
+        <p>A young team passionate about good food & better health</p>
+      </div>
+
+      <div class="story-card">
+        ✨
+        <h4>Our Promise</h4>
+        <p>Made with love, honesty, and zero compromise</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+
+    <span class="review-badge">Customer Love</span>
+
+    <h2>
+      What Our <span>Snackers</span> Say
+    </h2>
+
+    <p class="review-subtitle">
+      Join 50,000+ happy customers who’ve switched to healthy snacking
+    </p>
+
+    <div class="review-grid">
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Finally a healthy snack that my kids actually love!
+          We’ve completely stopped buying chips.”
+        </p>
+        <div class="review-user">
+          <span>PS</span>
+          <div>
+            <strong>Priya Sharma</strong>
+            <small>Delhi</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “As a fitness enthusiast, I’m super picky.
+          Poppino’s protein content & taste are next level.”
+        </p>
+        <div class="review-user">
+          <span>RV</span>
+          <div>
+            <strong>Rahul Verma</strong>
+            <small>Mumbai</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “The Cheese flavour is addictive and guilt-free.
+          Perfect for my Netflix binge sessions 🍿”
+        </p>
+        <div class="review-user">
+          <span>AG</span>
+          <div>
+            <strong>Ananya Gupta</strong>
+            <small>Bangalore</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Supporting local farmers while eating healthy?
+          That’s what I call smart snacking.”
+        </p>
+        <div class="review-user">
+          <span>VS</span>
+          <div>
+            <strong>Vikram Singh</strong>
+            <small>Jaipur</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container cta-box">
+
+    <h2>
+      Switch to <span>Healthy Snacking</span> Today
+    </h2>
+
+    <p>
+      Crunch smarter. Snack guilt-free.  
+      Join thousands of Indians choosing better snacks every day.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="cart.html" class="btn primary-btn">Shop Now</a>
+      <a href="#flavours" class="btn secondary-btn">Explore Flavours</a>
+    </div>
+
+  </div>
+</section>
+
+  <script src="js/script.js"></script>
+  <script src="js/utils/authState.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
