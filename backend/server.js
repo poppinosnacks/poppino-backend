@@ -7,7 +7,16 @@ const cors = require("cors");
 const app = express(); // ✅ FIRST
 
 /* middleware */
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: [
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "https://your-frontend-domain.com"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 /* routes */
