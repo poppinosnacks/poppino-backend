@@ -10,12 +10,7 @@ const app = express(); // ✅ FIRST
 //const cors = require("cors");
 
 app.use(cors({
-  origin: [
-    "http://127.0.0.1:3000",
-    "http://localhost:3000",
-    "https://your-frontend-domain.com"
-  ],
-  credentials: true
+  origin: "*"
 }));
 app.use(express.json());
 
