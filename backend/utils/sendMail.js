@@ -13,15 +13,16 @@ const transporter = nodemailer.createTransport({
 module.exports = async (to, subject, text) => {
   try {
     const info = await transporter.sendMail({
-      from: "poppinosnacks@gmail.com",
+      from: process.env.BREVO_USER,
       to,
       subject,
       text
     });
 
-    console.log("Brevo email sent:", info.response);
+    console.log("Email sent:", info.response);
+
   } catch (err) {
-    console.error("Brevo mail error:", err);
+    console.error("Mail error:", err);
     throw err;
   }
 };
