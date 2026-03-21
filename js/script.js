@@ -149,14 +149,22 @@ document.addEventListener("DOMContentLoaded", () => {
     checkoutForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const currentUser = getCurrentUser();
-      const token = getToken();
+      let currentUser = null;
+let token = null;
 
-      if (!currentUser || !token) {
-        alert("Please login to place your order");
-        window.location.href = "login.html";
-        return;
-      }
+if (typeof getCurrentUser === "function") {
+  currentUser = getCurrentUser();
+}
+
+if (typeof getToken === "function") {
+  token = getToken();
+}
+
+      let email = "Guest";
+
+if (currentUser && token) {
+  email = currentUser.email;
+}
 
       if (cart.length === 0) {
         alert("Your cart is empty");
@@ -171,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "x-user-email": currentUser.email
+            "x-user-email": email
           },
           body: JSON.stringify({
             items: cart,
@@ -186,8 +194,31 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        localStorage.removeItem("cart");
-        window.location.href = "success.html";
+// 🔥 WhatsApp message build
+let message = `🛍️ *New Order - Poppino*\n\n`;
+
+message += `👤 User: ${email}\n\n`;
+
+message += `🧾 *Order Details:*\n`;
+
+cart.forEach(item => {
+  message += `- ${item.name} x ${item.qty}\n`;
+});
+
+message += `\n💰 Total: ₹${total}\n`;
+message += `\nPayment: COD`;
+
+// 🔥 Your WhatsApp number
+let whatsappNumber = "91XXXXXXXXXX";
+
+let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+// 🔥 Open WhatsApp
+window.open(url, "_blank");
+
+// 🔥 Clear cart + redirect
+localStorage.removeItem("cart");
+window.location.href = "success.html";
 
       } catch (err) {
         alert("Server error");
