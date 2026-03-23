@@ -7,13 +7,17 @@ router.post("/", async (req, res) => {
 
     const { name, phone, address, items, totalAmount } = req.body;
 
-    const newOrder = new Order({
-      name,
-      phone,
-      address,
-      items,
-      totalAmount
-    });
+   const orderId = "POP" + Date.now();  // 🔥 add this
+
+const newOrder = new Order({
+  orderId,   // 🔥 add this
+  name,
+  phone,
+  address,
+  items,
+  totalAmount,
+  paymentMethod
+});
 
     const savedOrder = await newOrder.save();
 

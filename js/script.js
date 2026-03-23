@@ -182,12 +182,14 @@ if (currentUser && token) {
     "x-user-email": email
   },
   body: JSON.stringify({
+    name,
+    phone,
+    address,
     items: cart,
     totalAmount: total,
     paymentMethod: "COD"
   })
 });
-
         if (!res.ok) {
           const data = await res.json();
           alert(data.message || "Order failed");
