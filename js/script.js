@@ -175,18 +175,18 @@ if (currentUser && token) {
       cart.forEach(item => total += item.price * item.qty);
 
       try {
-        const res = await fetch("http://localhost:5000/api/orders", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-user-email": email
-          },
-          body: JSON.stringify({
-            items: cart,
-            totalAmount: total,
-            paymentMethod: "COD"
-          })
-        });
+        const res = await fetch("https://poppino-backend-1.onrender.com/api/orders", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "x-user-email": email
+  },
+  body: JSON.stringify({
+    items: cart,
+    totalAmount: total,
+    paymentMethod: "COD"
+  })
+});
 
         if (!res.ok) {
           const data = await res.json();
