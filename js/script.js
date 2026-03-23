@@ -147,6 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (checkoutForm) {
     checkoutForm.addEventListener("submit", async (e) => {
+      const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const address = document.getElementById("address").value;
       e.preventDefault();
 
       let currentUser = null;
@@ -211,7 +214,7 @@ message += `\n💰 Total: ₹${total}\n`;
 message += `\nPayment: COD`;
 
 // 🔥 Your WhatsApp number
-let whatsappNumber = "91XXXXXXXXXX";
+let whatsappNumber = "919523512301";
 
 let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
